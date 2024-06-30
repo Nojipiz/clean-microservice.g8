@@ -1,7 +1,7 @@
 lazy val root = (project in file("."))
   .enablePlugins(ScriptedPlugin)
   .settings(
-    name := "clean-microservice.g8",
+    name := "scala-clean-microservice.g8",
     Test / Keys.test := {
       val _ = (Test / g8Test).toTask("").value
     },

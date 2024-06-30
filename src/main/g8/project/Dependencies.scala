@@ -3,7 +3,7 @@ import Keys._
 
 object Dependencies {
 
-  $if(includeStack__lower == "zio")$
+  $if(includeStack == "zio")$
   lazy val ZIOVersion = "2.1.5"
   lazy val ZIOLoggingVersion = "2.3.0"
   lazy val ZIOJsonVersion = "0.7.1"
@@ -16,9 +16,9 @@ object Dependencies {
     "dev.zio" %% "zio-json" % ZIOJsonVersion,
     "dev.zio" %% "zio-http" % ZIOHttpVersion
   )
-  $elseif(includeStack__lower == "akka")$
+  $elseif(includeStack == "akka")$
     /*TODO Akka*/
-  $elseif(includeStack__lower == "pekko")$
+  $elseif(includeStack == "pekko")$
     /*TODO Pekko*/
   $endif$
   

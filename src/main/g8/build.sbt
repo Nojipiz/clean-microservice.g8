@@ -1,6 +1,12 @@
 import Dependencies._
 
-ThisBuild / scalaVersion := "$scala_version$"
+ThisBuild / scalaVersion := $if(useScala3.truthy && useLts.truthy)$ 
+  "3.3.3" 
+$elseif(useScala3.truthy)$
+  "3.4.2" 
+$else$
+  "2.13.14"
+$endif$
 
 lazy val $domainModule$ = project.in(file("core/$domainModule$"))
   .settings(libraryDependencies ++= $domainModule$Dependencies)

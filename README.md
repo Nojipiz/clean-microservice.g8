@@ -14,7 +14,9 @@ $ sbt new nojipiz/scala-clean-architecture.g8
 ```
 
 ## Run the application.
-- Replace 'mycustomeservice' with the name of your project.
+- Replace 'mycustomservice' with the name of your main module.
+- Replace 'clean-architecture-project' with the name of your project.
+
 ```shell
 $ cd clean-architecture-project
 $ sbt

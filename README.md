@@ -8,9 +8,14 @@ By default the application contains four modules:
 * `core/infrastructure/` Module for your infrastructure (depends on `core/domain/`, `core/application/`)
 * `mycustomservice/` Entry point of your application, (depends on `core/infrastructure/`, `core/domain/`, `core/application/`))
 
-## Run the application
+## Create new project from template
 ```shell
 $ sbt new nojipiz/scala-clean-architecture.g8
+```
+
+## Run the application.
+- Replace 'mycustomeservice' with the name of your project.
+```shell
 $ cd clean-architecture-project
 $ sbt
 sbt:root> mycustomservice/run

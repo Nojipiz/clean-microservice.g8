@@ -1,5 +1,5 @@
 package $package$.$applicationModule;format="word"$
 
-trait Application {
-  def foo: String = "foo"
+trait ApplicationUseCase {
+  def foo: String = "bar"
 }

@@ -22,5 +22,7 @@ lazy val $infrastructureModule$ = project.in(file("core/$infrastructureModule$")
   .settings(libraryDependencies ++= $infrastructureModule$Dependencies)
   .dependsOn($applicationModule$)
 
-lazy val $appname$ = (project in file("$appname$"))
+lazy val $appname$ = project.in(file("$appname$"))
   .dependsOn($infrastructureModule$)
+
+lazy val root = project.in(file(".")).aggregate($appname$)

@@ -1,5 +1,5 @@
 package $package$.$infrastructureModule;format="word"$
 
-trait Infrastructure {
+trait InfrastructureService {
   def foo: String = "foo"
 }

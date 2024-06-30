@@ -3,26 +3,6 @@ import Keys._
 
 object Dependencies {
 
-  $if(includeStack == "zio")$
-  lazy val ZIOVersion = "2.1.5"
-  lazy val ZIOLoggingVersion = "2.3.0"
-  lazy val ZIOJsonVersion = "0.7.1"
-  lazy val ZIOHttpVersion = "3.0.0-RC9"
-  lazy val includedStack = Seq(
-    "dev.zio" %% "zio" % ZIOVersion,
-    "dev.zio" %% "zio-test" % ZIOVersion % Test, 
-    "dev.zio" %% "zio-logging" % ZIOLoggingVersion,
-    "dev.zio" %% "zio-streams" % ZIOVersion,
-    "dev.zio" %% "zio-json" % ZIOJsonVersion,
-    "dev.zio" %% "zio-http" % ZIOHttpVersion
-  )
-  $elseif(includeStack == "akka")$
-    /*TODO Akka*/
-  $elseif(includeStack == "pekko")$
-    /*TODO Pekko*/
-  $endif$
-  
-
   /*
    * Your domain dependencies will be available for the infrastructure and application modules
    */
@@ -37,7 +17,7 @@ object Dependencies {
   )
 
   val $applicationModule$Dependencies: Seq[ModuleID] = Seq(
-  ) ++ includedStack
+  ) 
 
   val $infrastructureModule$Dependencies: Seq[ModuleID] = Seq(
     $if(includeOpinionatedLibraries.truthy && useScala3.truthy)$

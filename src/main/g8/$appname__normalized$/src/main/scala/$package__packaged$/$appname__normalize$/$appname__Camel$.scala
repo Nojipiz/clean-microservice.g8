@@ -14,5 +14,3 @@ object Main {
     println("Hello, Scala developer!")
 }
 $endif$
-
-

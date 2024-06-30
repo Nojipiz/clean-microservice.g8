@@ -1,7 +1,7 @@
 import Dependencies._
 import Settings._
 
-scalaVersion := "$scala_version$",
+scalaVersion := "$scala_version$"
 
 lazy val $domainModule$ = (project in file("$domainModule$")).
   .settings(libraryDependencies ++= $domainModule$Dependencies)
